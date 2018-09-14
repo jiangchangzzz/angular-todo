@@ -1,0 +1,35 @@
+<section class="todo">
+  <header class="header">
+    <h1 class="header-title">Todos</h1>
+    <div class="header-new">
+      <input class="new-input" placeholder="what needs to be done"
+        autofocus="" [(ngModel)]="newTodo.title"
+        (keyup.enter)="addTodo()"
+      />
+      <button class="new-btn" type="button" (click)="addTodo()">Add</button>
+    </div>
+  </header>
+  <section class="main" *ngIf="todos.length>0">
+    <ul class="list">
+      <li *ngFor="let todo of todos" [class.complete]="todo.complete">
+        <div class="list-view">
+          <input class="view-complete" type="checkbox" 
+            (click)="toggleTodoComplete(todo)" [checked]="todo.complete"
+          />
+          <label class="view-label">{{todo.title}}</label>
+          <button class="view-btn" (click)="removeTodo(todo)">remove</button>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <footer class="footer" *ngIf="todos.length>0">
+    <p class="todo-count">
+      <strong>{{todos.length}}</strong>
+      {{todos.length === 1 ? 'item' : 'items'}} left
+    </p>
+    <div class="footer-group">
+      <button class="save-btn" type="button" (click)="save()">Save</button>
+      <button class="clear-btn" type="button" (click)="clear()">Clear</button>
+    </div>
+  </footer>
+</section>

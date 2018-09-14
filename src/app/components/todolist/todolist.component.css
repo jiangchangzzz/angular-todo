@@ -1,0 +1,76 @@
+div, ul, li, header, main, footer, section, input{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+button, input{
+    outline: none;
+}
+
+.todo{
+    width: 300px;
+    margin: 10px auto;
+}
+
+.header{
+    margin-bottom: 10px;
+}
+
+.header-title{
+    color: #000;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-new{
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-input{
+    width: 200px;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.new-btn{
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: lightblue;
+    color: #fff;
+    border: 1px solid lightblue;
+}
+
+.new-btn:hover{
+    background-color: #fff;
+    color: lightblue;
+    cursor: pointer;
+}
+
+.list-view{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.view-complete{
+    margin-top: 6px;
+}
+
+.view-label{
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.view-btn{
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+
+
