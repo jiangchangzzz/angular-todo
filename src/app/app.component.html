@@ -1,12 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<header style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</header>
-<main>
-  <app-todolist></app-todolist>
-</main>
-<footer></footer>
-
-
+<div class="container">
+  <header class="header">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+    <nav>
+      
+    </nav>
+  </header>
+  <main class="main">
+    <router-outlet></router-outlet>
+  </main>
+  <footer class="footer"></footer>
+</div>

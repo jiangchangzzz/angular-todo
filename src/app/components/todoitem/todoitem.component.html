@@ -1,0 +1,5 @@
+<div class="list-view">
+  <input class="view-complete" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete" />
+  <label class="view-label" (click)="goDetail(todo)">{{todo.title}}</label>
+  <button class="view-btn" (click)="removeTodo(todo)">remove</button>
+</div>

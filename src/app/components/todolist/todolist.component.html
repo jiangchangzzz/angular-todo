@@ -14,12 +14,8 @@
   </header>
   <section class="main" *ngIf="todos.length>0">
     <ul class="list">
-      <li *ngFor="let todo of todos" [class.complete]="todo.complete">
-        <div class="list-view">
-          <input class="view-complete" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete" />
-          <label class="view-label">{{todo.title}}</label>
-          <button class="view-btn" (click)="removeTodo(todo)">remove</button>
-        </div>
+      <li *ngFor="let todo of todos">
+        <app-todoitem [todo]="todo"></app-todoitem>
       </li>
     </ul>
   </section>

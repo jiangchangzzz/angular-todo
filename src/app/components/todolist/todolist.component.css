@@ -1,13 +1,10 @@
-.todo{
-    width: 300px;
-    margin: 10px auto;
-}
-
 .header{
     margin-bottom: 10px;
 }
 
 .header-title{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     color: #000;
     border-bottom: 1px solid #ccc;
 }
@@ -34,28 +31,6 @@
 .form-warn{
     color: red;
     font-size: 12px;
-}
-
-.list-view{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 6px;
-}
-
-.view-complete{
-    margin-top: 6px;
-}
-
-.view-label{
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
-}
-
-.view-btn{
-    padding: 4px 6px;
-    border-radius: 4px;
 }
 
 .footer{

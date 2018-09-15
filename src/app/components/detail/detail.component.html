@@ -1,0 +1,22 @@
+<section class="detail">
+  <div class="header">
+    <h1 class="header-title">Detail</h1>
+  </div>
+  <div class="main">
+    <p class="main-desc">
+      <strong>title: </strong>
+      {{todo.title}}
+    </p>
+    <p class="main-desc">
+      <strong>complete: </strong>
+      {{todo.complete}}
+    </p>
+    <p class="main-desc">
+      <strong>createDate: </strong>
+      {{todo.createDate | date}}
+    </p>
+  </div>
+  <div class="footer">
+    <button class="footer-btn" type="button" (click)="goBack()">返回</button>
+  </div>
+</section>

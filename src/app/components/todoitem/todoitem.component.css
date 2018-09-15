@@ -1,0 +1,26 @@
+.list-view{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.view-complete{
+    margin-top: 6px;
+}
+
+.view-label{
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.view-label:hover{
+    text-decoration: underline;
+}
+
+.view-btn{
+    padding: 4px 6px;
+    border-radius: 4px;
+}

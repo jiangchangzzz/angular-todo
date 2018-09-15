@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-div, ul, li, header, main, footer, section, input, p{
+div, ul, li, header, main, footer, section, input, p, h1, h2, h3{
     margin: 0;
     padding: 0;
 }

@@ -32,14 +32,6 @@ export class TodolistComponent implements OnInit {
     this.newTodo = new Todo();
   } 
 
-  toggleTodoComplete(todo) {
-    this.todoDataService.toggleTodoComplete(todo);
-  }
-
-  removeTodo(todo) {
-    this.todoDataService.deleteTodoById(todo.id);
-  }
-
   save() {
     this.storageService.setItem(TODO_KEY, this.todos);
   }
