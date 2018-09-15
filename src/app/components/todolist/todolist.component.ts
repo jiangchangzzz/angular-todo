@@ -27,10 +27,10 @@ export class TodolistComponent implements OnInit {
     }
   }
 
-  addTodo() {
+  onSubmit() {
     this.todoDataService.addTodo(this.newTodo);
     this.newTodo = new Todo();
-  }
+  } 
 
   toggleTodoComplete(todo) {
     this.todoDataService.toggleTodoComplete(todo);

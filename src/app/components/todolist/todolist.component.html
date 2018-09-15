@@ -1,21 +1,22 @@
 <section class="todo">
   <header class="header">
     <h1 class="header-title">Todos</h1>
-    <div class="header-new">
-      <input class="new-input" placeholder="what needs to be done"
-        autofocus="" [(ngModel)]="newTodo.title"
-        (keyup.enter)="addTodo()"
-      />
-      <button class="new-btn" type="button" (click)="addTodo()">Add</button>
-    </div>
+    <form class="header-new" #todoForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input class="new-input" name="title" placeholder="what needs to be done" autofocus="" [(ngModel)]="newTodo.title"
+          required #title="ngModel" />
+        <button class="new-btn" type="submit" [disabled]="todoForm.invalid">Add</button>
+      </div>
+      <div *ngIf="title.invalid && (title.dirty || title.touched)">
+        <p class="form-warn" *ngIf="title.errors.required">Title is required.</p>
+      </div>
+    </form>
   </header>
   <section class="main" *ngIf="todos.length>0">
     <ul class="list">
       <li *ngFor="let todo of todos" [class.complete]="todo.complete">
         <div class="list-view">
-          <input class="view-complete" type="checkbox" 
-            (click)="toggleTodoComplete(todo)" [checked]="todo.complete"
-          />
+          <input class="view-complete" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete" />
           <label class="view-label">{{todo.title}}</label>
           <button class="view-btn" (click)="removeTodo(todo)">remove</button>
         </div>

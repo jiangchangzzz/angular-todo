@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+div, ul, li, header, main, footer, section, input, p{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-size: 14px;
+}
